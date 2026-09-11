@@ -1,0 +1,22 @@
+streamlit # simple frontend lib
+
+# Utilities
+numpy
+pandas
+
+# Face Recognition
+scikit-learn
+dlib-bin # used coz dlib does not have precompiled whl 
+
+git+https://github.com/ageitgey/face_recognition_models
+setuptools<70.0.0
+
+supabase
+bcrypt
+
+segno # for qr code genration
+pillow # for image preprocessing
+ 
+
+librosa #deal with all voice files
+resembyzer # make embedding of voice files

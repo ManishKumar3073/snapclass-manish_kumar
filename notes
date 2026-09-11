@@ -1,0 +1,16 @@
+Python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+Terminal Activation         command
+Windows PowerShell	     .\venv\Scripts\Activate.ps1
+Windows CMD              	venv\Scripts\activate.bat
+Git Bash / Linux / macOS	source venv/bin/activate
+
+history : all commands used 
+
+pip : like python playstore
+
+ctrl + j : terminal open 
+ctrl + shift + ` : for new terminal 
+
+pip install -r req (no need for complete name, press tab) -> used to install lib which are writen in req but not isntalled
