@@ -19,4 +19,4 @@ pillow # for image preprocessing
  
 
 librosa #deal with all voice files
-resembyzer # make embedding of voice files
+resemblyzer # make embedding of voice files
