@@ -2,7 +2,7 @@ import streamlit as st
 
 def header_home():
 
-    logo_url="assets/classlens_logo.png"
+    logo_url="https://i.ibb.co/YTYGn5qV/logo.png"
     # logo_url="C:\MANISHDOCS\Prime Classes\Anaconda Projects\snapclass\assets\classlens_logo.png"
 
     st.markdown(f"""
@@ -16,7 +16,7 @@ def header_home():
 
 def header_dashboard():
 
-    logo_url="assets/classlens_logo.png"
+    logo_url="https://i.ibb.co/YTYGn5qV/logo.png"
 
     st.markdown(f"""
         <div style="display:flex; align-items:center; justify-content:center; gap:10px">
