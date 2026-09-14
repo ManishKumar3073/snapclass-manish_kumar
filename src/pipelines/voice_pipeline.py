@@ -15,7 +15,7 @@ def get_voice_embedding(audio_bytes):
         audio, sr = librosa.load(io.BytesIO(audio_bytes), sr=16000)
         wav = preprocess_wav(audio)
         embedding = encoder.embed_utterance(wav)
-        return embedding.to_list()
+        return embedding.tolist()
     except Exception as e:
         st.error('Voice recog error')
         return None
@@ -34,10 +34,10 @@ def identify_speaker(new_embedding, candidates_dict, threshold=0.65):
                 best_score=similarity
                 best_sid=sid
 
-            if best_score >= threshold:
+    if best_score >= threshold:
                 return best_sid, best_score
 
-            return None, best_score
+    return None, best_score
 
 def process_bulk_audio(audio_bytes, candidates_dict, threshold=0.65):
 
