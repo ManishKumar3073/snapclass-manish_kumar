@@ -2,8 +2,8 @@ import streamlit as st
 
 def header_home():
 
-    # logo_url="https://i.ibb.co/YTYGn5qV/logo.png"
-    logo_url="https://chatgpt.com/backend-api/estuary/content?id=file_0000000027ac8211901b2cd3fa55b385&ts=497051&p=fs&cid=1&sig=6fa13c765b2657bce509fe99bfabcaa71a26e492d08c59213e4d1ebdb40b2f2a&v=0"
+    logo_url="assets/classlens_logo.png"
+    # logo_url="C:\MANISHDOCS\Prime Classes\Anaconda Projects\snapclass\assets\classlens_logo.png"
 
     st.markdown(f"""
         <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:30px; margin-top:30px">
@@ -16,7 +16,7 @@ def header_home():
 
 def header_dashboard():
 
-    logo_url="https://chatgpt.com/backend-api/estuary/content?id=file_0000000027ac8211901b2cd3fa55b385&ts=497051&p=fs&cid=1&sig=6fa13c765b2657bce509fe99bfabcaa71a26e492d08c59213e4d1ebdb40b2f2a&v=0"
+    logo_url="assets/classlens_logo.png"
 
     st.markdown(f"""
         <div style="display:flex; align-items:center; justify-content:center; gap:10px">
