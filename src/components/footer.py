@@ -43,7 +43,6 @@ def footer_home():
             <p style="font-weight: bold; color: white; margin: 0;">
                 Built with ❤️ by
             </p>
-
             <a href="#" style="font-weight: bold; color: white; text-decoration: none;">Manish Kumar</a>
         </div>
     """, unsafe_allow_html=True)
@@ -62,7 +61,6 @@ def footer_dashboard():
             <p style="font-weight: bold; color: black; margin: 0;">
                 Built with ❤️ by
             </p>
-
             <a href="#" style="font-weight: bold; color: black; text-decoration: none;">Manish Kumar</a>
         </div>
     """, unsafe_allow_html=True)
