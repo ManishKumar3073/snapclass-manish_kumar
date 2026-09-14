@@ -154,7 +154,7 @@ def teacher_tab_take_attendance():
                             'timestamp': current_timestamp,
                             'ispresent': bool(is_present)
                         })
-                attendance_result_dialog(pd.DataFrame(results),attendance_to_log)
+                    attendance_result_dialog(pd.DataFrame(results),attendance_to_log)
         with c3:
             if st.button('Use Voice attendance',type='primary',width='stretch',icon=':material/mic:'):
                 voice_attendance_dialog(selected_subject_id)
@@ -184,18 +184,18 @@ def teacher_tab_manage_subjects():
                 ("🕰️","Classes",sub['total_classes'])
 
             ]
-        def share_btn():
-            if st.button(f"Share Code: {sub['name']}",key=f"share_{sub['subject_code']}",icon=":material/share:"):
-                share_subject_dialog(sub['name'],sub['subject_code'])
-            st.space()
+            def share_btn():
+                if st.button(f"Share Code: {sub['name']}",key=f"share_{sub['subject_code']}",icon=":material/share:"):
+                    share_subject_dialog(sub['name'],sub['subject_code'])
+                st.space()
 
-        subject_card(
-            name=sub['name'],
-            code=sub['subject_code'],
-            section=sub['section'],
-            stats=stats,
-            footer_callback=share_btn
-        )
+            subject_card(
+                name=sub['name'],
+                code=sub['subject_code'],
+                section=sub['section'],
+                stats=stats,
+                footer_callback=share_btn
+            )
     else:
         st.info(st.warning("No Subject Found. Create one Above"))
 
