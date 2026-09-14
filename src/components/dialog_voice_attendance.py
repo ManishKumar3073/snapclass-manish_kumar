@@ -1,7 +1,6 @@
 import streamlit as st
 from src.database.config import supabase
 from src.pipelines.voice_pipeline import process_bulk_audio
-st.dialog('Voice Attendance')
 from datetime import datetime
 import pandas as pd
 from src.components.dialog_attendance_results import show_attendance_result
@@ -14,6 +13,9 @@ def voice_attendance_dialog(selected_subject_id):
     audio_data = st.audio_input("Record classroom audio")
 
     if st.button('Analyze Audio',width='stretch',type='primary'):
+        if audio_data is None: 
+            st.warning('Please record classroom audio first.')
+            return
         with st.spinner('Processing Audio data'):
             enrolled_res = supabase.table('subject_student').select("*, students(*)").eq('subject_id',selected_subject_id).execute()
             enrolled_students = enrolled_res.data
@@ -36,11 +38,12 @@ def voice_attendance_dialog(selected_subject_id):
             for node in enrolled_students:
                 student = node['students']
                 score = detected_scores.get(int(student['student_id']),0.0)
-                is_present=bool(score)>0
+                # is_present=bool(score)>0
+                is_present=int(student['student_id']) in detected_scores
                 results.append({
                     "Name":student['name'],
                     "ID":student['student_id'],
-                    "Source":", ".join(score) if is_present else "_",
+                    "Source": f"Voice ({score:.2f})" if is_present else "_",
                     "Status":"✅Present" if is_present else "❌Absent"
                 })
                 attendance_to_log.append({
@@ -50,7 +53,7 @@ def voice_attendance_dialog(selected_subject_id):
                     'ispresent': bool(is_present)
                 })     
 
-            st.session_state.voice_Attendance_results = (pd.DataFrame(results),attendance_to_log)       
+            st.session_state.voice_attendance_results = (pd.DataFrame(results),attendance_to_log)       
 
 
     if st.session_state.get('voice_attendance_results'):
