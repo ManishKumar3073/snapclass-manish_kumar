@@ -44,14 +44,7 @@ def footer_home():
                 Built with ❤️ by
             </p>
 
-            <a href="#" 
-               style="
-                   font-weight: bold;
-                   color: white;
-                   text-decoration: none;
-               ">
-                Manish Kumar
-            </a>
+            <a href="#" style="font-weight: bold; color: white; text-decoration: none;">Manish Kumar</a>
         </div>
     """, unsafe_allow_html=True)
 
@@ -70,13 +63,6 @@ def footer_dashboard():
                 Built with ❤️ by
             </p>
 
-            <a href="#" 
-               style="
-                   font-weight: bold;
-                   color: black;
-                   text-decoration: none;
-               ">
-                Manish Kumar
-            </a>
+            <a href="#" style="font-weight: bold; color: black; text-decoration: none;">Manish Kumar</a>
         </div>
     """, unsafe_allow_html=True)
