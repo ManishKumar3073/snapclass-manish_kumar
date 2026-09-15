@@ -116,8 +116,18 @@ def student_screen():
         img = np.array(Image.open(photo_source))
 
         with st.spinner('AI is scanning..'):
-            detected, all_ids, num_faces=predict_attendance(img)
+            # detected, all_ids, num_faces=predict_attendance(img)
+            st.write("DEBUG: Photo captured")
 
+            with st.spinner('AI is scanning..'):
+                st.write("DEBUG: Starting face prediction")
+
+                detected, all_ids, num_faces = predict_attendance(img)
+
+                st.write("DEBUG: Face prediction finished")
+                st.write("DEBUG detected:", detected)
+                st.write("DEBUG all_ids:", all_ids)
+                st.write("DEBUG num_faces:", num_faces)
             if(num_faces==0):
                 st.warning('Face not Found!')
 
