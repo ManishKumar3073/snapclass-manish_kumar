@@ -121,7 +121,7 @@ def student_screen():
             if(num_faces==0):
                 st.warning('Face not Found!')
 
-            if(num_faces>1):
+            elif(num_faces>1):
                 st.warning('Multiple faces Found!')
 
             else:
@@ -179,7 +179,7 @@ def student_screen():
                                 time.sleep(1)
                                 st.rerun()
                         else:
-                            st.error('Couldnt caapture your facial features for registrations')
+                            st.error('Couldnt capture your facial features for registrations')
                 
                 else:
                     st.warning('Please enter your name')
